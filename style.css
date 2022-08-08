@@ -1,0 +1,386 @@
+@charset "UTF-8";
+body {
+  font-weight: bold;
+}
+
+:root {
+  --color-pink: #ff7b7b;
+  --color-yellow: #ffffe6;
+  --color-dark-yellow: #ffff83;
+  --color-gray: #595959;
+  --color-red: #f00;
+  --color-black: #000;
+  --color-white: #fff;
+  --border-width: 0.72pt;
+  --font-size-label: 6pt;
+  --font-size-title: 10pt;
+  --font-size-heading: 12pt;
+  --font-size-input: 11pt;
+  --block-size: 4.5mm;
+  --block-offset: calc(-3.7mm - var(--block-size));
+  --font-arial: Arial, sans-serif;
+  --font-tahoma: Tahoma, sans-serif;
+  --font-courier: "Courier New", Courier, monospace;
+  --page-offset: 10mm;
+}
+
+body .report.report-html {
+  font-family: var(--font-arial);
+  font-size: var(--font-size-label);
+  line-height: 1;
+  color: var(--color-red);
+  border-color: var(--color-red);
+}
+
+.report.report-html .page {
+  box-sizing: border-box;
+  padding: var(--page-offset);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.report.report-html .page * {
+  box-sizing: border-box;
+}
+
+input[type=text],
+textarea {
+  font-family: var(--font-courier);
+  font-weight: bold;
+  font-size: var(--font-size-input);
+  max-width: 100%;
+}
+
+.fxs-0 {
+  flex-shrink: 0;
+}
+
+.checkbox-container {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  user-select: none;
+}
+.checkbox-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+  left: -10000vw;
+}
+.checkbox-container input:checked ~ .checkmark:after {
+  display: block;
+}
+.checkbox-container .checkmark {
+  position: relative;
+  top: 50%;
+  right: 0;
+  height: 3mm;
+  width: 3mm;
+  background-color: transparent;
+  border: var(--border-width) solid var(--color-gray);
+  margin-left: 1mm;
+  cursor: pointer;
+  color: var(--color-black);
+}
+.checkbox-container .checkmark:after {
+  content: "✘";
+  font-size: 2mm;
+  line-height: 1em;
+  display: none;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+header #header-top {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+header #header-top-left {
+  display: flex;
+  flex-direction: column;
+}
+header #header-top-left > div {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+header #logo-zp {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+}
+header #logo-zp > img {
+  width: 61.55mm;
+  height: 12.78mm;
+  object-fit: contain;
+}
+header #logo-zp > #kod-zp {
+  font-size: 8pt;
+  margin-top: 3.7mm;
+}
+header #nazev {
+  border: 0.719pt solid;
+  border-radius: 1.5mm;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 43mm;
+  height: 24mm;
+  margin: 0 14mm;
+  font-size: var(--font-size-title);
+  line-height: normal;
+  font-family: var(--font-tahoma);
+}
+header #nazev:before, header #nazev:after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: var(--color-black);
+  width: var(--block-size);
+  height: var(--block-size);
+}
+header #nazev:before {
+  left: var(--block-offset);
+}
+header #nazev:after {
+  right: var(--block-offset);
+}
+header #nazev .big {
+  font-size: 1.4em;
+}
+header #nazev .biggest {
+  font-size: 2em;
+}
+header #nazev > div {
+  display: inline-block;
+}
+header #nadpis {
+  font-size: var(--font-size-heading);
+  max-width: 75.987mm;
+  margin-top: -0.18mm;
+}
+header #nadpis > small {
+  margin-top: 1mm;
+  display: block;
+  font-size: var(--font-size-label);
+}
+header #podpis-zp {
+  font-style: italic;
+  display: inline-flex;
+  justify-content: center;
+  align-items: flex-end;
+  border: 1px solid;
+  padding-bottom: 0.2mm;
+  height: 35mm;
+  width: 59.9mm;
+}
+header #upozorneni-font {
+  text-align: center;
+  margin: 0.18mm 0;
+  font-style: italic;
+}
+
+main {
+  height: 100%;
+}
+main table#form {
+  width: 100%;
+  border: var(--border-width) solid var(--color-red);
+  border-spacing: 0;
+  padding: unset;
+}
+main table#form > tbody > tr > th, main table#form > tbody > tr > td {
+  padding: unset;
+  text-align: left;
+}
+main table#form > tbody > tr > th {
+  background-color: var(--color-pink);
+  color: var(--color-white);
+  border-bottom: var(--border-width) solid var(--color-black);
+  line-height: 10.8pt;
+  font-weight: bold;
+  padding-left: 1.75mm;
+}
+main table#form > tbody > tr > td {
+  --td-padding-sides: 1.85mm;
+  background-color: var(--color-yellow);
+}
+main table#form > tbody > tr > td:not(:empty) {
+  padding: 0 var(--td-padding-sides) 0.5mm;
+}
+main table#form > tbody > tr > td .row {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+main table#form > tbody > tr > td .row > * {
+  width: 100%;
+}
+main table#form > tbody > tr > td .row > * + * {
+  margin-left: 1.9mm;
+}
+main table#form > tbody > tr > td .row.row-w-auto > * {
+  width: auto;
+}
+main table#form > tbody > tr > td .form-group {
+  display: flex;
+  flex-direction: column;
+  margin-top: 0.3mm;
+}
+main table#form > tbody > tr > td .form-group label {
+  line-height: 7.2pt;
+  font-weight: bold;
+}
+main table#form > tbody > tr > td .form-group input,
+main table#form > tbody > tr > td .form-group textarea {
+  background-color: var(--color-white);
+  border: var(--border-width) solid var(--color-red);
+}
+main table#form > tbody > tr > td .form-group input {
+  line-height: calc(6.77mm - 2 * var(--border-width) - 2px);
+}
+main table#form > tbody > tr > td .form-group.highlight-bg {
+  padding: 0 1.3mm 0.37mm;
+}
+main table#form > tbody > tr > td .form-group > .flex-input {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: relative;
+}
+main table#form > tbody > tr > td .form-group > .flex-input .kc {
+  font-size: var(--font-size-title);
+  position: absolute;
+  top: 50%;
+  transform: translate(100%, -50%);
+  right: -2.97mm;
+}
+main table#form > tbody > tr > td .highlight-bg {
+  background-color: var(--color-dark-yellow);
+}
+main table#form > tbody > tr:not(:first-of-type) > th {
+  border-top: var(--border-width) solid var(--color-black);
+}
+main table#form #prohlaseni {
+  font-size: 7pt;
+  font-style: italic;
+  font-weight: normal;
+  line-height: normal;
+  margin-top: 1.9mm;
+  margin-left: calc(5.27mm - var(--td-padding-sides));
+}
+main table#form #cislo-zp {
+  font-family: var(--font-tahoma);
+  font-size: 8pt;
+  margin-top: 3.7mm;
+  margin-left: calc(20.65mm - var(--td-padding-sides));
+}
+main table#form #datum {
+  margin-top: 1.51mm;
+  margin-left: calc(59.04mm - var(--td-padding-sides));
+}
+main table#form #datum input {
+  text-align: center;
+}
+main table#form #podpis {
+  font-style: italic;
+  display: inline-flex;
+  justify-content: center;
+  align-items: flex-end;
+  border: 1px solid;
+  padding-bottom: 0.2mm;
+  height: 23.57mm;
+  width: 59.99mm;
+  background-color: var(--color-white);
+  margin-right: calc(17.52mm - var(--td-padding-sides));
+  margin-top: 1.36mm;
+  margin-bottom: 0.28mm;
+  position: relative;
+}
+main table#form #podpis-obsah {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--color-black);
+}
+main tr {
+  display: table-row;
+}
+
+footer {
+  --block-offset: 11mm;
+  position: relative;
+  margin: 0 calc(var(--page-offset) * -1);
+}
+footer #barcode {
+  margin-left: 19.59mm;
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+footer #barcode > img {
+  object-fit: contain;
+  width: 31.083mm;
+  height: 7.62mm;
+}
+footer:before, footer:after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: var(--color-black);
+  width: var(--block-size);
+  height: var(--block-size);
+}
+footer:before {
+  left: var(--block-offset);
+}
+footer:after {
+  right: var(--block-offset);
+}
+
+.bold-text {
+  font-weight: bold;
+}
+
+.normal-text {
+  font-weight: normal;
+}
+
+.italic-text {
+  font-style: italic;
+}
+
+.underline-text {
+  text-decoration: underline;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
