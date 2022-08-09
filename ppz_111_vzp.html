@@ -55,8 +55,7 @@
                         <div id="podpis-zp" class="fxs-0">Datum převzetí, razítko a podpis pracovníka VZP</div>
                     </div>
                     <div id="upozorneni-font" class="fxs-0">Formulář bude zpracován elektronicky. Vyplňujte jej, prosím,
-                        předepsaným
-                        typem písma Courier New Bold 11.</div>
+                        předepsaným typem písma Courier New Bold 11.</div>
                 </header>
                 <main>
                     <table id="form">
@@ -70,25 +69,25 @@
                                 <div class="form-group ZamNaz fxs-0">
                                     <label for="ZamNaz">Název zaměstnavatele</label>
                                     <input type="text" class="form-control" id="ZamNaz" name="ZamNaz"
-                                        value="<%+ZamNaz+%>" />
+                                        value="<%ZamNaz%>" />
                                 </div>
 
                                 <div class="row">
                                     <div class="form-group ZamUli">
                                         <label for="ZamUli">Ulice</label>
                                         <input type="text" class="form-control" id="ZamUli" name="ZamUli"
-                                            value="<%+ZamUli+%>" />
+                                            value="<%ZamUli%>" />
                                     </div>
                                     <div class="form-group ZamCpCo fxs-0">
                                         <label for="ZamCpCo">Číslo popisné / číslo orientační</label>
                                         <input type="text" class="form-control" id="ZamCpCo" name="ZamCpCo"
-                                            value="<%+ZamCpCo+%>" />
+                                            value="<%ZamCpCo%>" />
                                     </div>
                                     <div class="form-group ZamIC highlight-bg fxs-0"
                                         style="margin-right:calc(var(--td-padding-sides) * -1);padding-right:var(--td-padding-sides)">
                                         <label for="ZamIC">Číslo plátce pojistného</label>
                                         <input type="text" class="form-control" id="ZamIC" name="ZamIC"
-                                            value="<%+ZamIC+%>" />
+                                            value="<%ZamIC%>" />
                                     </div>
                                 </div>
 
@@ -96,17 +95,17 @@
                                     <div class="form-group ZamPSC">
                                         <label for="ZamPSC">PSČ</label>
                                         <input type="text" class="form-control" id="ZamPSC" name="ZamPSC"
-                                            value="<%+ZamPSC+%>" />
+                                            value="<%ZamPSC%>" />
                                     </div>
                                     <div class="form-group ZamObe">
                                         <label for="ZamObe">Obec</label>
                                         <input type="text" class="form-control" id="ZamObe" name="ZamObe"
-                                            value="<%+ZamObe+%>" />
+                                            value="<%ZamObe%>" />
                                     </div>
                                     <div class="form-group ZamTel">
                                         <label for="ZamTel">Telefon</label>
                                         <input type="text" class="form-control" id="ZamTel" name="ZamTel"
-                                            value="<%+ZamTel+%>" />
+                                            value="<%ZamTel%>" />
                                     </div>
                                 </div>
                             </td>
@@ -132,7 +131,7 @@
                                                     VZP</label>
                                                 <div class="flex-input">
                                                     <input type="text" class="form-control" id="VymZak" name="VymZak"
-                                                        value="<%+VymZak+%>" /><span class="kc">Kč</span>
+                                                        value="<%VymZak%>" /><span class="kc">Kč</span>
                                                 </div>
                                             </div>
                                         </div>
@@ -140,14 +139,14 @@
                                             <div class="form-group PocZam">
                                                 <label for="PocZam">Počet zaměstnanců pojištěných u VZP</label>
                                                 <input type="text" class="form-control" id="PocZam" name="PocZam"
-                                                    value="<%+PocZam+%>" />
+                                                    value="<%PocZam%>" />
                                             </div>
                                             <div class="form-group SumPoj">
                                                 <label for="SumPoj">Výše pojistného - součet pojistného zaměstnanců
                                                     pojištěných u VZP</label>
                                                 <div class="flex-input">
                                                     <input type="text" class="form-control" id="SumPoj" name="SumPoj"
-                                                        value="<%+SumPoj+%>" /><span class="kc">Kč</span>
+                                                        value="<%SumPoj%>" /><span class="kc">Kč</span>
                                                 </div>
                                             </div>
                                         </div>
@@ -173,11 +172,11 @@
                                         <div id="datum" class="form-group DatVyp fxs-0">
                                             <label for="DatVyp">Vyplněno dne (DD.MM.RRRR)</label>
                                             <input type="text" class="form-control" id="DatVyp" name="DatVyp"
-                                                value="<%+DatVyp+%>" />
+                                                value="<%DatVyp%>" />
                                         </div>
                                     </div>
-                                    <div id="podpis" class="fxs-0"><span id="podpis-obsah" class="PODPIS">
-                                            <%+PODPIS+%>
+                                    <div id="podpis" class="fxs-0"><span id="podpis-obsah" class="Podpis">
+                                            <%Podpis%>
                                         </span>Razítko a podpis odpovědného pracovníka</div>
                                 </div>
                             </td>
