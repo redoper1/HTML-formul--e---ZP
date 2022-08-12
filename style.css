@@ -85,7 +85,7 @@ textarea {
   color: var(--color-black);
 }
 .checkbox-container .checkmark:after {
-  content: "✘";
+  content: "\2718";
   font-size: 2mm;
   line-height: 1em;
   display: none;

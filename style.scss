@@ -87,7 +87,7 @@ textarea {
         color: var(--color-black);
 
         &:after {
-            content: "✘";
+            content: "\2718";
             font-size: 2mm;
             line-height: 1em;
             display: none;
