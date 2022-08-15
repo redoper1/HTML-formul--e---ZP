@@ -319,6 +319,10 @@ main table#form #podpis-obsah {
   justify-content: center;
   align-items: center;
   color: var(--color-black);
+  text-align: center;
+  background: transparent;
+  border: unset;
+  font-weight: normal;
 }
 main tr {
   display: table-row;
