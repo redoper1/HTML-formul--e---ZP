@@ -85,7 +85,7 @@ textarea {
   color: var(--color-black);
 }
 .checkbox-container .checkmark:after {
-  content: "\2718";
+  content: "✘";
   font-size: 2mm;
   line-height: 1em;
   display: none;
@@ -271,6 +271,19 @@ main table#form > tbody > tr > td .highlight-bg {
 }
 main table#form > tbody > tr:not(:first-of-type) > th {
   border-top: var(--border-width) solid var(--color-black);
+}
+main table#form > tbody > tr.border-bottom {
+  position: relative;
+}
+main table#form > tbody > tr.border-bottom:after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: calc(var(--border-width) * 2);
+  background-color: var(--color-black);
 }
 main table#form #prohlaseni {
   font-size: 7pt;

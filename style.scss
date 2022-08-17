@@ -320,6 +320,21 @@ main {
                     border-top: var(--border-width) solid var(--color-black);
                 }
             }
+
+            &.border-bottom {
+                position: relative;
+
+                &:after {
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    height: calc(var(--border-width) * 2);
+                    background-color: var(--color-black);
+                }
+            }
         }
 
         #prohlaseni {
